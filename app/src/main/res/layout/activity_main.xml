@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- App title -->
+    <TextView
+        android:id="@+id/app_title"
+        style="@style/TextStyle"
+        android:text="@string/title"
+        android:textSize="50sp"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- App title END -->
+
+    <!-- Spinner die value components -->
+    <TextView
+        android:id="@+id/spinner_textview"
+        style="@style/TextStyle"
+        android:layout_margin="5dp"
+        android:text="@string/spinner_text"
+        app:layout_constraintBottom_toTopOf="@+id/dice_values"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/dice_values"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="150dp"
+        android:layout_marginVertical="70dp"
+        app:layout_constraintTop_toBottomOf="@+id/app_title"
+        tools:layout_editor_absoluteX="0dp" />
+    <!-- Spinner die value components END -->
+
+    <!-- Roll dice buttons -->
+    <Button
+        android:id="@+id/roll_1_die_button"
+        style="@style/ButtonStyle"
+        android:text="@string/roll_1_die"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice_values" />
+
+    <Button
+        android:id="@+id/roll_2_die_button"
+        style="@style/ButtonStyle"
+        android:text="@string/roll_2_die"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice_values" />
+    <!-- Roll dice buttons END -->
+
+    <!-- Output components -->
+    <TextView
+        android:id="@+id/output_title_text"
+        style="@style/TextStyle"
+        android:layout_marginVertical="100dp"
+        android:text="@string/output_title_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice_values" />
+
+    <TextView
+        android:id="@+id/output"
+        style="@style/TextStyle"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/output_title_text" />
+    <!-- Output components END -->
+
+    <!-- Add custom die components -->
+    <EditText
+        android:id="@+id/input_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="100dp"
+        android:hint="@string/input_text_hint"
+        android:autofillHints="Die max face value"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/add_die_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/add_die_button"
+        style="@style/ButtonStyle"
+        android:layout_marginBottom="150dp"
+        android:text="@string/add_die"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <!-- Add custom die components END -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

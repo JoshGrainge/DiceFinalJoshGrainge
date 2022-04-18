@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">DiceFinalJoshGrainge</string>
+
+    <string name="title">Dice App</string>
+
+    <string name="spinner_text">Choose Dice Value</string>
+
+    <string name="roll_1_die">Roll 1 Die</string>
+    <string name="roll_2_die">Roll 2 Dice</string>
+
+    <string name="output_title_text">Output:</string>
+
+    <string name="input_text_hint">Enter Custom Die Face Amount</string>
+    <string name="add_die">Add Custom Die</string>
+
+</resources>
