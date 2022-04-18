@@ -54,13 +54,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARE_PREF, MODE_PRIVATE);
         Set<String> set = sharedPreferences.getStringSet(SAVED_DICE, new HashSet<>());
         if(set != null) {
-            Log.d("Set values", set.toString());
             diceValues.addAll(set);
-            Log.d("Did save?","Did add values!! YAY!");
-        }
-        else
-        {
-            Log.d("Did save?","Didn't add values");
         }
 
         // Populate spinner adapter with dice values
